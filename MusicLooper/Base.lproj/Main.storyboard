@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree.png" translatesAutoresizingMaskIntoConstraints="NO" id="0x0-Rt-Sk8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4mu-eW-e9c" userLabel="on/off">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <animations/>
+                                <color key="onTintColor" red="0.8980392157" green="0.17254901959999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="IFE-1K-1aR"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sj-3g-16q">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.8980392157" green="0.17254901959999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="JrQ-NW-cRl">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="25%" width="44"/>
+                                    <segment title="50%" width="44"/>
+                                    <segment title="75%" width="44"/>
+                                    <segment title="100%" width="44"/>
+                                </segments>
+                                <color key="tintColor" red="0.8980392157" green="0.17254901959999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="volumeValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="PCe-WL-7I9"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wBA-vb-P9a">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                                <color key="minimumTrackTintColor" red="0.8980392157" green="0.17254901959999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.8980392157" green="0.17254901959999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderVolumeChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="UPB-kN-h9R"/>
+                                </connections>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="1" maximumValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="abX-fh-fpi">
+                                <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                <animations/>
+                                <color key="tintColor" red="0.8980392157" green="0.17254901959999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="speedValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="NIE-vG-nmi"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed: 1x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76l-OA-bB7">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.8980392157" green="0.17254901959999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4mu-eW-e9c" secondAttribute="bottom" constant="8" id="7d0-1h-zJ3"/>
+                            <constraint firstItem="0x0-Rt-Sk8" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="KAS-p9-I12"/>
+                            <constraint firstItem="0x0-Rt-Sk8" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="OS5-Wl-3dg"/>
+                            <constraint firstItem="JrQ-NW-cRl" firstAttribute="height" secondItem="abX-fh-fpi" secondAttribute="height" id="PUQ-Qe-Bq1"/>
+                            <constraint firstItem="76l-OA-bB7" firstAttribute="centerX" secondItem="abX-fh-fpi" secondAttribute="centerX" id="PdL-Cm-fzi"/>
+                            <constraint firstItem="5sj-3g-16q" firstAttribute="centerY" secondItem="JrQ-NW-cRl" secondAttribute="centerY" id="QIr-vp-75O"/>
+                            <constraint firstItem="4mu-eW-e9c" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="QKE-gf-xsV"/>
+                            <constraint firstItem="wBA-vb-P9a" firstAttribute="centerX" secondItem="JrQ-NW-cRl" secondAttribute="centerX" id="QYg-5e-hlG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5sj-3g-16q" secondAttribute="bottom" constant="13" id="UfZ-d7-E7I"/>
+                            <constraint firstItem="wBA-vb-P9a" firstAttribute="width" secondItem="JrQ-NW-cRl" secondAttribute="width" id="Wqb-L3-bPE"/>
+                            <constraint firstItem="JrQ-NW-cRl" firstAttribute="centerY" secondItem="abX-fh-fpi" secondAttribute="centerY" id="YUq-Gi-5CA"/>
+                            <constraint firstItem="76l-OA-bB7" firstAttribute="centerY" secondItem="wBA-vb-P9a" secondAttribute="centerY" id="ZDj-e9-pJU"/>
+                            <constraint firstItem="4mu-eW-e9c" firstAttribute="leading" secondItem="5sj-3g-16q" secondAttribute="trailing" constant="8" id="dgK-zQ-pv8"/>
+                            <constraint firstItem="JrQ-NW-cRl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="djH-e2-2kE"/>
+                            <constraint firstItem="0x0-Rt-Sk8" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="fE2-rd-Vb5"/>
+                            <constraint firstItem="JrQ-NW-cRl" firstAttribute="top" secondItem="wBA-vb-P9a" secondAttribute="bottom" constant="19" id="g17-MA-mlS"/>
+                            <constraint firstItem="abX-fh-fpi" firstAttribute="leading" secondItem="JrQ-NW-cRl" secondAttribute="trailing" constant="54" id="koY-Rz-F4i"/>
+                            <constraint firstItem="0x0-Rt-Sk8" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="yQx-NI-7ph"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0x0-Rt-Sk8"/>
+                                <exclude reference="4mu-eW-e9c"/>
+                                <exclude reference="5sj-3g-16q"/>
+                                <exclude reference="JrQ-NW-cRl"/>
+                                <exclude reference="wBA-vb-P9a"/>
+                                <exclude reference="abX-fh-fpi"/>
+                                <exclude reference="76l-OA-bB7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7d0-1h-zJ3"/>
+                                <exclude reference="UfZ-d7-E7I"/>
+                                <exclude reference="QYg-5e-hlG"/>
+                                <exclude reference="Wqb-L3-bPE"/>
+                                <exclude reference="QKE-gf-xsV"/>
+                                <exclude reference="dgK-zQ-pv8"/>
+                                <exclude reference="QIr-vp-75O"/>
+                                <exclude reference="PdL-Cm-fzi"/>
+                                <exclude reference="ZDj-e9-pJU"/>
+                                <exclude reference="koY-Rz-F4i"/>
+                                <exclude reference="PUQ-Qe-Bq1"/>
+                                <exclude reference="YUq-Gi-5CA"/>
+                                <exclude reference="djH-e2-2kE"/>
+                                <exclude reference="g17-MA-mlS"/>
+                                <exclude reference="KAS-p9-I12"/>
+                                <exclude reference="OS5-Wl-3dg"/>
+                                <exclude reference="fE2-rd-Vb5"/>
+                                <exclude reference="yQx-NI-7ph"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="0x0-Rt-Sk8"/>
+                                <include reference="4mu-eW-e9c"/>
+                                <include reference="5sj-3g-16q"/>
+                                <include reference="JrQ-NW-cRl"/>
+                                <include reference="wBA-vb-P9a"/>
+                                <include reference="abX-fh-fpi"/>
+                                <include reference="76l-OA-bB7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7d0-1h-zJ3"/>
+                                <include reference="UfZ-d7-E7I"/>
+                                <include reference="QYg-5e-hlG"/>
+                                <include reference="Wqb-L3-bPE"/>
+                                <include reference="QKE-gf-xsV"/>
+                                <include reference="dgK-zQ-pv8"/>
+                                <include reference="QIr-vp-75O"/>
+                                <include reference="PdL-Cm-fzi"/>
+                                <include reference="ZDj-e9-pJU"/>
+                                <include reference="koY-Rz-F4i"/>
+                                <include reference="PUQ-Qe-Bq1"/>
+                                <include reference="YUq-Gi-5CA"/>
+                                <include reference="djH-e2-2kE"/>
+                                <include reference="g17-MA-mlS"/>
+                                <include reference="KAS-p9-I12"/>
+                                <include reference="OS5-Wl-3dg"/>
+                                <include reference="fE2-rd-Vb5"/>
+                                <include reference="yQx-NI-7ph"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="speedLabel" destination="76l-OA-bB7" id="Gz2-6O-nnx"/>
+                        <outlet property="volumeSegment" destination="JrQ-NW-cRl" id="hgH-Ru-TEK"/>
+                        <outlet property="volumeSlider" destination="wBA-vb-P9a" id="2fm-Tn-5gF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="402"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tree.png" width="1920" height="1080"/>
+    </resources>
+</document>
